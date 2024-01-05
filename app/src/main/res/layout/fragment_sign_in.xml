@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SignInFragment"
+    android:background="@color/green">
+
+    <TextView
+        android:id="@+id/tv_singIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@+id/tv_singIn"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_email"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:paddingStart="12dp"
+                android:padding="15dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Sign In"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:elevation="0dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_alreadyRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_signIn"
+        app:layout_constraintStart_toStartOf="@id/btn_signIn"
+        app:layout_constraintEnd_toStartOf="@+id/tv_alreadyRegistered_signIn"
+        android:text="Don't have an account"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tv_alreadyRegistered_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/signUp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_alreadyRegistered"
+        app:layout_constraintTop_toTopOf="@+id/tv_alreadyRegistered"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_alreadyRegistered"
+        app:layout_constraintEnd_toEndOf="@id/btn_signIn"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar_signIn"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_alreadyRegistered"
+        android:layout_marginTop="30dp"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

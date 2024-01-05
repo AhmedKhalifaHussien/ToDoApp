@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddToDoFragment"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+    android:background="@color/green"
+    >
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/btn_todoClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/x"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_todoClose">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_todo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:hint="Type your task...."
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="12dp"
+                    android:paddingTop="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btn_todoNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/green"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
