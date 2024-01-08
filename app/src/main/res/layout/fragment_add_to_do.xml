@@ -42,21 +42,25 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-                app:hintEnabled="false">
+                app:hintEnabled="false"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_todo"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:hint="Type your task...."
-                    android:inputType="textEmailAddress"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="10"
                     android:paddingStart="12dp"
-                    android:paddingTop="15dp" />
+                    android:paddingTop="15dp"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </com.google.android.material.card.MaterialCardView>
